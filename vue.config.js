@@ -17,9 +17,10 @@ const cdn = {
     vue: 'Vue',
     vuex: 'Vuex',
     'vue-router': 'VueRouter',
-    'Axios': 'axios',
-    'Qs': 'qs',
+    'axios': 'axios',
+    'qs': 'qs',
     'element-ui': 'ELEMENT',
+    'vue-i18n':'vue-i18n'
   },
   // cdn的css链接
   css: [
@@ -34,6 +35,7 @@ const cdn = {
     'https://cdn.bootcss.com/axios/0.19.0-beta.1/axios.min.js',
     'https://cdn.bootcss.com/qs/6.9.0/qs.min.js',
     'https://unpkg.com/element-ui/lib/index.js',
+    'https://cdn.bootcss.com/vue-i18n/8.14.1/vue-i18n.min.js'
   ]
 }
 
@@ -44,7 +46,7 @@ module.exports = {
     '/dist/' : '/',
   assetsDir: './static',
   devServer: {
-    port: 8080, // 开发环境端口
+    port: 8088, // 开发环境端口
     compress: true, // 开启压缩
     proxy: {
       '/api': {
@@ -59,14 +61,14 @@ module.exports = {
   },
   chainWebpack: config => {
     // ============压缩图片 start============
-    config.module
-      .rule('images')
-      .use('image-webpack-loader')
-      .loader('image-webpack-loader')
-      .options({
-        bypassOnDebug: true
-      })
-      .end()
+    // config.module
+    //   .rule('images')
+    //   .use('image-webpack-loader')
+    //   .loader('image-webpack-loader')
+    //   .options({
+    //     bypassOnDebug: true
+    //   })
+    //   .end()
     // ============压缩图片 end============
 
     // ============注入cdn start============

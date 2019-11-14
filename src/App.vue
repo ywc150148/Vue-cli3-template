@@ -1,20 +1,17 @@
 <template>
   <div id="app">
     <div id="nav">
-      <!-- <router-link to="/">Home</router-link>| -->
-      <!-- <router-link to="/about">About</router-link> -->
+      <!-- <router-link to="/">Home</router-link>
+      <router-link to="/about">About</router-link>-->
 
-      <el-button-group>
-        <el-button type="success" icon="el-icon-arrow-left">
-          <router-link to="/about">About</router-link>
-        </el-button>
-        <el-button type="primary">
-          <router-link to="/">Home</router-link>
-          <i class="el-icon-arrow-right el-icon--right"></i>
-        </el-button>
-      </el-button-group>
+      <el-button type="success" icon="el-icon-arrow-left">
+        <router-link to="/about">About</router-link>
+      </el-button>
+      <el-button type="primary">
+        <router-link to="/">Home</router-link>
+        <i class="el-icon-arrow-right el-icon--right"></i>
+      </el-button>
     </div>
-    <!-- <router-view/> -->
 
     <keep-alive>
       <router-view v-if="$route.meta.keep_alive"></router-view>

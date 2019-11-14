@@ -1,5 +1,5 @@
     // 引用axios和qs
-    const http = require('Axios')
+    const http = require('axios')
     // const qs = require('Qs');
     // import Vue from 'vue'
     // import VueEvent from "./VueEvent.js";
